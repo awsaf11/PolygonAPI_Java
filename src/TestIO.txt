@@ -1,0 +1,346 @@
+/**********************************************************
+ * EECS2011: Fundamentals of Data Structures,  Winter 2019
+ * Assignment 1: Polygon Hierarchy
+ * Section:  M  
+ * Student Name: Nafis Ahmed Awsaf  
+ * Student eecs account:  awsaf11
+ * Student ID number:  215306095
+ **********************************************************/
+ 
+ 
+
+ /*****************************************************************************************************************/
+ 
+ @Test Case - 1  : Poly1 - Non-Simple Polygon
+ 	Input : 
+	5
+	8.9 21.8 29.1 8.8 39.2 20.3 14 11 28 25
+	
+	Output : 
+ 	The size of the Polygon is : 5
+ 	Representation of the points :[(8.9, 21.8)] [(29.1, 8.8)] [(39.2, 20.3)] [(14.0, 11.0)] [(28.0, 25.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 105.35371946527503
+ 	
+ 	/***************************************************************************************************************/
+ 	
+ @Test Case - 2  : Poly2 -Convex Polygon
+ 	Input : 
+ 	7
+	28 2 31 5 28 10 14 14 5 10 8 4 18 1
+	
+	Output :
+ 	The size of the Polygon is : 7
+ 	Representation of the points :[(28.0, 2.0)] [(31.0, 5.0)] [(28.0, 10.0)] [(14.0, 14.0)] [(5.0, 10.0)] [(8.0, 4.0)] [(18.0, 1.0)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? true
+ 	Area of the Polygon is : 227.0
+ 	Perimeter of the Polygon is : 61.68105622485254
+ 	
+ 	 /*****************************************************************************************************************/
+ 	
+ 	
+ @Test Case -3 : Poly3 - Non-Simple Polygon
+ 	Input :
+ 	9
+	6 10 20 3 23 3 23 8 27 3 30 3 20 15 16 5 20 14
+	
+	Output :
+ 	The size of the Polygon is : 9
+ 	Representation of the points :[(6.0, 10.0)] [(20.0, 3.0)] [(23.0, 3.0)] [(23.0, 8.0)] [(27.0, 3.0)] [(30.0, 3.0)] [(20.0, 15.0)] [(16.0, 5.0)] [(20.0, 14.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 83.85550662637084
+ 	
+ 	 /*****************************************************************************************************************/
+ 	
+ @Test Case -4 : Poly4 - Non-Simple Polygon
+ 	Input :
+ 	13
+	5 6 13 2 12 6 20 2 16 12 17 11 19 5 13 11 19 15 8 12 14 7 5 11 9 6
+	
+	Output:
+ 	The size of the Polygon is : 13
+ 	Representation of the points :[(5.0, 6.0)] [(13.0, 2.0)] [(12.0, 6.0)] [(20.0, 2.0)] [(16.0, 12.0)] [(17.0, 11.0)] [(19.0, 5.0)] [(13.0, 11.0)] [(19.0, 15.0)] [(8.0, 12.0)] [(14.0, 7.0)] [(5.0, 11.0)] [(9.0, 6.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 95.68111783388835
+ 	
+ 	 /*****************************************************************************************************************/
+ 	
+ @Test Case -5 : Poly5- Simple Polygon
+ 	Input :
+ 	13
+ 	5 6 13 2 12 6 20 2 18 12 17 11 19 5 13 11 19 15 8 12 14 7 5 11 9 6
+ 	
+ 	Output:
+ 	The size of the Polygon is : 13
+ 	Representation of the points :[(5.0, 6.0)] [(13.0, 2.0)] [(12.0, 6.0)] [(20.0, 2.0)] [(18.0, 12.0)] [(17.0, 11.0)] [(19.0, 5.0)] [(13.0, 11.0)] [(19.0, 15.0)] [(8.0, 12.0)] [(14.0, 7.0)] [(5.0, 11.0)] [(9.0, 6.0)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? false
+ 	Area of the Polygon is : 82.0
+ 	Perimeter of the Polygon is : 95.1088272468049
+ 	
+ 	 /*****************************************************************************************************************/
+ 	
+ @Test Case-6 : Poly6 - Simple Polygon
+ 	Input :
+ 	22
+	22 14 7 15 8 17 7 17 5 15 6 14 4 12 6 11 9 15 11 7 12 8 11 7 9 10 11 8 6 10 5
+	11 3 16 3 18 4 19 8 16 9 14 9 13 8
+	
+	Output:
+ 	The size of the Polygon is : 22
+ 	Representation of the points :[(22.0, 14.0)] [(7.0, 15.0)] [(8.0, 17.0)] [(7.0, 17.0)] [(5.0, 15.0)] [(6.0, 14.0)] [(4.0, 12.0)] [(6.0, 11.0)] [(9.0, 15.0)] [(11.0, 7.0)] [(12.0, 8.0)] [(11.0, 7.0)] [(9.0, 10.0)] [(11.0, 8.0)] [(6.0, 10.0)] [(5.0, 11.0)] [(3.0, 16.0)] [(3.0, 18.0)] [(4.0, 19.0)] [(8.0, 16.0)] [(9.0, 14.0)] [(9.0, 13.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 86.95834644834991
+ 	
+ 	 /*****************************************************************************************************************/
+ 	
+ @Test Case-7 : Poly7 - Convex Polygon
+ 	Input :
+ 	4
+	6 1 9 5 5 8 2 4
+	
+	Output:
+ 	The size of the Polygon is : 4
+ 	Representation of the points :[(6.0, 1.0)] [(9.0, 5.0)] [(5.0, 8.0)] [(2.0, 4.0)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? true
+ 	Area of the Polygon is : 25.0
+ 	Perimeter of the Polygon is : 20.0
+ 	
+ 	 /*****************************************************************************************************************/
+ 	 
+ @Test Case-8 : Poly8 - Non Simple Polygon
+ 	Input  :
+ 	5
+ 	5 -1 1 1 1 3 -4 -5 7 2 
+ 	
+ 	Output :
+  	The size of the Polygon is : 5
+ 	Representation of the points :[(5.0, -1.0)] [(1.0, 1.0)] [(1.0, 3.0)] [(-4.0, -5.0)] [(7.0, 2.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 32.55007317292547
+ 	
+ 	 /*****************************************************************************************************************/
+ 	 
+ @Test Case-9 : Poly9 - Convex Polygon
+ 	Input :
+	4
+	1 9 2 4 10 2 12 4
+	
+	Output :
+ 	The size of the Polygon is : 4
+ 	Representation of the points :[(1.0, 9.0)] [(2.0, 4.0)] [(10.0, 2.0)] [(12.0, 4.0)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? true
+ 	Area of the Polygon is : 35.0
+ 	Perimeter of the Polygon is : 28.25670386316887
+ 	
+ 	 /*****************************************************************************************************************/
+ 	 
+ @Test Case-10 : Poly10 - Non Simple Polygon
+ 	Input :
+ 	8
+	5 2 1 27 40 32 1 9 0 0 12 3 12 12 5 6 34 4
+	
+	Output:
+ 	The size of the Polgyon is : 8
+ 	Representation of the points :[(5.0, 2.0)] [(1.0, 27.0)] [(40.0, 32.0)] [(1.0, 9.0)] [(0.0, 0.0)] [(12.0, 3.0)] [(12.0, 12.0)] [(5.0, 6.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 153.5583564679897
+ 	
+ 	 /*****************************************************************************************************************/
+ 	 
+ @Test Case-11 : Poly11 - Non Simple Polygon
+ 	Input : 
+ 	12
+	1 9 2 4 10 2 12 4 2 3 14 5 13 2 1 1 2 6 3 0 12 5 9 3
+	
+	Output :
+ 	The size of the Polygon is : 12
+ 	Representation of the points :[(1.0, 9.0)] [(2.0, 4.0)] [(10.0, 2.0)] [(12.0, 4.0)] [(2.0, 3.0)] [(14.0, 5.0)] [(13.0, 2.0)] [(1.0, 1.0)] [(2.0, 6.0)] [(3.0, 0.0)] [(12.0, 5.0)] [(9.0, 3.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 88.6758942705943
+ 	DisjointSegments ? : false
+ 	
+ 	/*****************************************************************************************************************/
+
+@Test Case-12 : Poly12 - Non Simple Polygon
+	Input : 
+	33
+	1 9 2 4 10 2 12 4 2 3 14 5 13 2 1 1 2 6 3 0 12 5 9 3 3 4 12 12 3 6
+	3 9 5 7 9 3 6 1 0 4 4 3 3 3 1 5 4 3 2 9 1 0 5 3 3 1 9 3 3 8 1 9 3 2 7 7 
+	
+	Output:
+ 	The size of the Polygon is : 33
+ 	Representation of the points :[(1.0, 9.0)] [(2.0, 4.0)] [(10.0, 2.0)] [(12.0, 4.0)] [(2.0, 3.0)] [(14.0, 5.0)] [(13.0, 2.0)] [(1.0, 1.0)] [(2.0, 6.0)] [(3.0, 0.0)] [(12.0, 5.0)] [(9.0, 3.0)] [(3.0, 4.0)] [(12.0, 12.0)] [(3.0, 6.0)] [(3.0, 9.0)] [(5.0, 7.0)] [(9.0, 3.0)] [(6.0, 1.0)] [(0.0, 4.0)] [(4.0, 3.0)] [(3.0, 3.0)] [(1.0, 5.0)] [(4.0, 3.0)] [(2.0, 9.0)] [(1.0, 0.0)] [(5.0, 3.0)] [(3.0, 1.0)] [(9.0, 3.0)] [(3.0, 8.0)] [(1.0, 9.0)] [(3.0, 2.0)] [(7.0, 7.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 200.56005581812028
+ 	
+ 	/*****************************************************************************************************************/
+ 	
+ @Test Case-13 : Poly13 : Convex Polygon (square)
+ 	Input :
+	5
+	0 0 0 2 2 2 2 0 1 0
+	
+	Output :
+ 	The size of the Polygon is : 5
+ 	Representation of the points :[(0.0, 0.0)] [(0.0, 2.0)] [(2.0, 2.0)] [(2.0, 0.0)] [(1.0, 0.0)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? true
+ 	Area of the Polygon is : 4.0
+ 	Perimeter of the Polygon is : 8.0
+ 	
+ 	/*****************************************************************************************************************/
+ 
+ @Test Case-14 : DisjointSegment : Poly1
+ 	Input : 
+ 	5
+	8.9 21.8 29.1 8.8 39.2 20.3 14 11 28 25
+	
+	Output :
+	The size of the Polygon is : 5
+ 	Representation of the points :[(8.9, 21.8)] [(29.1, 8.8)] [(39.2, 20.3)] [(14.0, 11.0)] [(28.0, 25.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 105.35371946527503
+ 	DisjointSegments ? : false
+ 	
+ 	/*****************************************************************************************************************/
+ 	
+ 	
+@Test Case-15 : Poly14 :  (Convex Polygon) Quadrileteral 
+	Input : 	
+	4
+	1 5 10 11 12 13 5 8 
+	
+	Output :
+ 	The size of the Polygon is : 4
+ 	Representation of the points :[(1.0, 5.0)] [(10.0, 11.0)] [(12.0, 13.0)] [(5.0, 8.0)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? true
+ 	Area of the Polygon is : 3.5
+ 	Perimeter of the Polygon is : 27.247406218180785
+ 	
+ 	/*****************************************************************************************************************/
+ 	
+@Test Case-16 : Poly15 (Simple Polygon) (Concave Hexagon)
+	Input :
+	6
+ 	1 5 10 11 12 13 5 8 1.5 12.5 -2.34 -6
+ 	
+ 	Output : 
+ 	The size of the Polygon is : 6
+ 	Representation of the points :[(1.0, 5.0)] [(10.0, 11.0)] [(12.0, 13.0)] [(5.0, 8.0)] [(1.5, 12.5)] [(-2.34, -6.0)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? false
+ 	Area of the Polygon is : 27.525
+ 	Perimeter of the Polygon is : 58.33850545415352
+ 	
+ 	/*****************************************************************************************************************/
+ 	
+ @Test Case-17 : Poly16 (Simple Polygon) (Complex Octagon)
+ 	Input :
+	8
+ 	1 5 10 11 12 13 5 8 1.5 12.5 -2.34 -6 1 4 -17 2.5
+ 	The size of the Polygon is : 8
+ 	
+ 	Output :
+ 	Representation of the points :[(1.0, 5.0)] [(10.0, 11.0)] [(12.0, 13.0)] [(5.0, 8.0)] [(1.5, 12.5)] [(-2.34, -6.0)] [(1.0, 4.0)] [(-17.0, 2.5)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? false
+ 	Area of the Polygon is : 20.195
+ 	Perimeter of the Polygon is : 93.6208198642247
+ 	
+ 	 /*****************************************************************************************************************/
+ 	 
+@Test Case-18 : Poly17 (Non-Simple Polygon) (Complex Hendecagon) 
+	Input :
+	11
+	1 0 2 5 12 13 5 8 1.5 12.5 -2.34 -6 1 4 -17 2.5 0 0 3 2 9 9
+	
+	Output:
+ 	The size of the Polygon is : 11
+ 	Representation of the points :[(1.0, 0.0)] [(2.0, 5.0)] [(12.0, 13.0)] [(5.0, 8.0)] [(1.5, 12.5)] [(-2.34, -6.0)] [(1.0, 4.0)] [(-17.0, 2.5)] [(0.0, 0.0)] [(3.0, 2.0)] [(9.0, 9.0)] 
+ 	PolygonType : isSimple ? false
+ 	PolygonType : isConvex ? false
+ 	NonSimplePolygonException thrown!
+ 	The Polygon is Non Simple : Cannot calculate area !
+ 	Perimeter of the Polygon is : 121.75775564514754
+ 	
+ 	/*****************************************************************************************************************/
+ 	
+ @Test Case-19 : Poly18 (Convex Polygon) (Triangle)
+	Input : 
+	3
+	1 3 4 3 2 9
+	
+	Output : 
+ 	The size of the Polygon is : 3
+ 	Representation of the points :[(1.0, 3.0)] [(4.0, 3.0)] [(2.0, 9.0)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? true
+ 	Area of the Polygon is : 9.0
+ 	Perimeter of the Polygon is : 15.407317850634978
+ 	
+ 	/*****************************************************************************************************************/
+
+
+@Test Case-20 : Poly19 (Simple Polygon) (Concave Quadrilateral)
+	Input :
+	4
+	1 3 4 3 2 9 -4 -4 
+	
+	Output :
+ 	The size of the Polygon is : 4
+ 	Representation of the points :[(1.0, 3.0)] [(4.0, 3.0)] [(2.0, 9.0)] [(-4.0, -4.0)] 
+ 	PolygonType : isSimple ? true
+ 	PolygonType : isConvex ? false
+ 	Area of the Polygon is : 20.5
+ 	Perimeter of the Polygon is : 32.24470165065574
+ 	
+ 	 /*****************************************************************************************************************/
+
+ @Test Case-21 : Not a Polygon
+ 	2	
+	1 1 2 2
+ 	The size of the Polygon is : 2
+ 	Representation of the points :[(1.0, 1.0)] [(2.0, 2.0)] 
+
+Exception in thread "main" java.lang.IndexOutOfBoundsException  
+	at SimplePolygon.getVertex(SimplePolygon.java:94)
+	at ConvexPolygon.isConvex(ConvexPolygon.java:56)
+	at PolygonTester.main(PolygonTester.java:36)
+	
+	 /*****************************************************************************************************************/
+ 	
+ 
+ 	***THANK YOU***
+ 
